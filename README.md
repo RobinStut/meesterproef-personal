@@ -12,12 +12,12 @@ Tijdens de meesterproef ben ik in samenwerking Sterre, Bas en Jesse bezig om het
 
 ## Leerdoelen
 
-| Vakken                   | Leerdoel                                                                                                                                                                                   | Beschrijving |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| **Web App From Scratch** | _De code bevat geen syntax fouten en is netjes opgemaakt._                                                                                                                                 | Vul nog in   |
-|                          | _Er is minimaal gebruik gemaakt van een IIFE en Object Literals om structuur, in de vorm van modules, aan te brengen aan de code en onnodige vervuiling van de globale scope te voorkomen_ | Vul nog in   |
-| **Web Design**           | _Er zijn verschillende tests gedaan en verwerkt om het ontwerp te verbeteren._                                                                                                             | Vul nog in   |
-| **Real Time Web**        | _De server houdt een datamodel bij en elke client wordt de juiste data doorgestuurd_                                                                                                       | Vul nog in   |
+| Vakken                   | Leerdoel                                                                                                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Web App From Scratch** | _De code bevat geen syntax fouten en is netjes opgemaakt._                                                                                                                                 | Vul nog in |
+|                          | _Er is minimaal gebruik gemaakt van een IIFE en Object Literals om structuur, in de vorm van modules, aan te brengen aan de code en onnodige vervuiling van de globale scope te voorkomen_ | Vul nog in |
+| **Web Design**           | _Er zijn verschillende tests gedaan en verwerkt om het ontwerp te verbeteren._                                                                                                             | Vul nog in |
+| **Real Time Web**        | _De server houdt een datamodel bij en elke client wordt de juiste data doorgestuurd_                                                                                                       | Vul nog in |
 
 ## Week 1
 
@@ -97,3 +97,45 @@ Op dinsdag hebben we de laatste styling punten uitgewerkt. Samen met Sterre heb 
 Op woensdag stond de afspraak om 1 uur bij het Bijlmer Sportpark. Harry, Vincent en Daan waren aanwezig om het eindproduct te bezichtigen. We vertelde nogmaals wat de inzichten waren die de UX had onderzocht, en op basis daarvan hoe wij de problemen hadden opgelost. Nadat ieder zijn woordje had gedaan, was Harry erg enthousiast over het eindresultaat. Met nog een paar kleine opmerkingen kon hij ons vertellen dat het werk wat we geleverd hadden in de smaak viel. Ook Daan had veel lovende woorden over hoe het eindproduct uit de verf was gekomen. Na verloop van het gesprek was er bij Vincent de vraag wat ons prototype nou verschilde met het eindwerk van UX achter de schermen. Hieruit konden we concluderen dat we vorige week juist geconstateerd hadden dat het verschil tussen een afbeelding prototype en een werkend product niet duidelijk was. Na kort uitgelegd te hebben dat we hier een tastbaar product hadden die functioneert zoals verwacht, begon het kwartje te vallen. Harry heeft ons vervolgens om adviezen gevraagd over het verloop van de uitwerking, en ons om een schatting gevraagd wat de volledige uitwerking ongeveer zal kosten. We ontvingen een applaus voor ons resultaat en de inzet die we hier in gestoken hadden.
 
 ## Reflectie
+
+## Web App From Scratch
+
+> De code bevat geen syntax fouten en is netjes opgemaakt.
+
+> Er is minimaal gebruik gemaakt van een IIFE en Object Literals om structuur, in de vorm van modules, aan te brengen aan de code en onnodige vervuiling van de globale scope te voorkomen
+
+Op het gebied van Web App From Scratch viel er voor mij nog veel te leren.Tijdens de lessen van het vak ben ik nauwelijks toegekomen aan het gebruik van modules. Ik had het toegepast, maar snapte het voordeel hier niet van. Door samen te werken als groep kwamen we er al snel achter dat we veel merge conflicts kregen zodra we zouden werken in 1 file. Het opdelen van de code was vervolgens een logische stap om merge conflict te voorkomen. Het voordeel hiervan is dat elk stukje code in een los bestandje staat, wat er voor zorgt dat je tegelijk aan 1 pagina zou kunnen werken zonder direct in de zelfde bestanden te zitten werken.
+
+Echter hadden we in het begin van het project nogal moeite met het toepassen van de juiste conventies. Hier waren vooraf geen afspraken over gemaakt, maar beter laat dan nooit. Het viel ons namelijk op dat de mappen structuur niet logisch was en dat files door elkaar heen stonden. Met name tijdens onze refactor class kwam dit naar boven. Door vervolgens een conventie af te spreken en deze gezamenlijk uit te schrijven op het bord, was de verwarring bij iedereen verdwenen. Vanaf dit punt binnen het project ben ik pas echt gaan begrijpen hoe nuttig de Modules eigenlijk kunnen zijn. Over de benaming van deze Modules hebben we ook gediscussieerd. Het resultaat waar we op uit kwamen was dat we alle grote onderdelen een naam gaven, bijvoorbeeld “quiz”. Op het moment dat er modules in deze directory geplaatst moesten worden, gaven we deze de naam van de directory, plus een beschrijvende naam van het conponent. Een Module van de carrousel van de quiz zou als volgt zijn “ js/modules/quiz/quiz-carrousel ”. Dit hielp mij persoonlijk erg goed de juiste files te vinden. Als ik vervolgens iemand uit ons project wilde helpen, kon ik zo ook gemakkelijk de juiste bestanden vinden. Deze mappenstructuur hebben we aangehouden voor de server modules, de client side javascript en de css.
+![](ReModule2.jpg)
+
+Halverwege het project kwamen we er achter dat het mergen naar GitHub voor problemen kon zorgen. Het gebeurde namelijk dat iemand per ongeluk onze development branch had gedeletet van GitHub. Ook kon het voorkomen dat invalide code alsnog werd gemengde of werd overschreven met dat van een ander. Dit gaf ons de reden om Branch Protection Rules op te stellen. Al vroeg in het project hadden we besloten om in branches te werken. Op de master branch pushen we het project zodra deze volledig werkt. In de development branch worden alle losse branches gepushed. Het is de bedoeling dat er vanaf de development branch een nieuwe branch werd aangemaakt. In deze branch werkte je de features uit waar je mee bezig was. Zodra deze features werkend gekregen waren, werden deze naar GitHub gepushed. Vervolgens moest ieder een pull request aanmaken om zo de nieuwe branch met de development branch te mergen. In deze pull request moest je een collaborator vragen om de code te reviewen. Wanneer ik gevraagd werd om code te reviewen, kreeg ik een goed inzicht of de code niet vervuild werd. Ook had ik hier een goed beeld op eventuele merge conflicts. Ik als administrator van het project zou in theorie niemand nodig hebben om het werk te moeten mergen. Echter heb ik hier geen gebruik van gemaakt, om zo de kans op fouten te verkleinen. Het lastige aan werken met branches is dat de code waarin je werkt verouderd kan raken met datgene wat op GitHub staat. Hierdoor werd ik genoodzaakt om met een hogere regelmaat mijn werk naar GitHub te pushen. Ondanks dit best goed ging, ben ik van mening dat ik hier nog wat stappen in kan maken. Dit gehele proces droeg bij aan het valide houden van de code.
+![](branchProtection.png)
+
+Als laatst hebben we binnen het project onze Prettier instellingen afgesteld op elkaar. Op deze mannier was de codestructuur bij de teamgenoten gelijk, en werd het meer een eenheid. Door dit te doen werd de code van een ander inzichtelijker, aangezien deze op de zelfde manier was ingedeeld als in je eigen code editor. Het gebruik van een dubbel quote werd gehanteerd in plaats van een enkele quote. Ook kozen we ervoor om gebruik te maken van een semicolom in plaats van dit weg te laten. Ondanks het verschil niet veel zou uitmaken, leerde je werken met conventies en had iedereen dezelfde conventies gebruikt.
+
+## Web Design
+
+> Er zijn verschillende tests gedaan en verwerkt om het ontwerp te verbeteren.
+
+Het testen met de UX studenten heeft veel betekend voor het eindproduct. In de afgelopen jaren is meerdere malen getest met behulp van een testplan. Dit testplan was vaak niet uitgebreid, en de scenario’s waren vaak zo geschetst dat er niet direct een nuttig resultaat uit kwam. Ditmaal hadden Lisa van de UX minor het testplan uitgewerkt. Tijdens het testen op de OSB werd duidelijk hoe nuttig een testplan was. Doordat Lisa al langer bezig was met de quiz, wist ze eigenlijk uit haar hoofd hoe deze test zou moeten verlopen. Echter was de verwachting dat de studenten moeite zouden hebben met de Engelse taal om haar te begrijpen. Om die reden heb ik het testplan goed doorgenomen om zo de juiste vragen te kunnen stellen aan het test persoon. Ik begon het nut in te zien van een test plan, en ben ook van mening dat de structuur die Lisa bracht met het testplan, dat deze een groot voordeel heeft gebracht in het verloop van de Quiz.
+![](testplan.png)
+
+Nadat ik de resultaten van de Quiz heb kunnen uitwerken, ben ik wederom met Lisa gaan zitten om het gedeelte te testen van de Quiz waar de resultaten te zien waren. Het fijne hieraan was dat ik de feedback van een testpersoon ter plekke kon aanpassen, om zo een iteratie te maken waar nodig. Dit voordeel was er ook toen ik de formule voor quiz resultaten ging testen. Door de vragen uit te printen was het voor mij enorm inzichtelijk waar ik rekening mee moest houden bij het uitwerken van de resultaten van de quiz. Ik ben van mening dat dit proces de quiz ten goede is gekomen, en voor mij persoonlijk een inzicht was dat het testen met korte iteraties daadwerkelijk nuttig kon zijn.
+![](quizPaper.jpg)
+
+## Real Time Web
+
+> De server houdt een datamodel bij en elke client wordt de juiste data doorgestuurd
+
+In de afgelopen weken voordat de Meesterproef begonnen was, was de management van data niet echt aan bod gekomen. Omdat ik als eerste met data aan de gang was gegaan om de resultaten van de quiz te genereren, liepen we hier in een later stadium van het project tegenaan. Wanneer de Quiz uit kwam op bijvoorbeeld Hockey, moesten hier de juiste beschrijving van de sport bij geplaatst worden. Deze beschrijving van de sport was in een JSON bestand te vinden genaamd quizResults.json. Later in het proces werd duidelijk dat zodra Bas deze data ook wilde gebruiken, dat het onlogisch zou zijn om de quiz data in te laden voor alleen deze beschrijving te gebruiken. Niet alleen qua performance was dit geen goed idee, maar ook met de kijk op logica was het vreemd om de beschrijving van een sport terug te vinden onder de naam quizResults.JSON
+
+Na deze bevinding hebben we de structuur van onze data op een whiteboard uitgeschreven. Hier konden we rekening houden met de performance, dus wanneer de juiste data werd opgehaald als dit nodig was. Ook hebben we hier gesproken over hoe de data gebruikt zou moeten worden, en wat de ideale structuur zou zijn om deze data bij te houden. Dit was iets waar ik zelf niet eerder aan gewerkt had, maar kon me al snel voorstellen hoe nuttig dit kon zijn. In dit project hebben we geen aangeleverde data ontvangen van de klant, waardoor we voornamelijk onze eigen data hebben moeten zoeken of genereren. Door na te denken over hoe de structuur er uit zou moeten zien, werd het voor ons duidelijk hoe we bepaalde dubbel gebruikte data konden verminderen. Ik heb heel veel geleerd van de mannier hoe Jesse dit helder kon uitleggen op het bord. Het opdelen van de data net zoals we de infrastructuur hadden gedaan, heeft veel goeds betekend voor ons prototype. We kregen inzicht van waar bepaalde data onnodig werd ingeladen, en hebben zo de performance ook kunnen verbeteren.
+
+![](datamodel2.jpg)
+
+### Met dank aan
+
+- [Bas Pieren](https://github.com/BasPieren)
+- [Sterre van Geest](https://github.com/sterrevangeest)
+- [Jesse Dijkman](https://github.com/jesseDijkman1)
